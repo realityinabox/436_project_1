@@ -53,9 +53,7 @@
   <FILES>
     <GeneratedCs>
       <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\AD1.c</PathName>
-      <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\AD2.c</PathName>
       <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\AdcLdd1.c</PathName>
-      <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\AdcLdd2.c</PathName>
       <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\BitIoLdd1.c</PathName>
       <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\BitIoLdd2.c</PathName>
       <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\BitIoLdd3.c</PathName>
@@ -88,9 +86,7 @@
     </GeneratedCs>
     <GeneratedHs>
       <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\AD1.h</PathName>
-      <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\AD2.h</PathName>
       <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\AdcLdd1.h</PathName>
-      <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\AdcLdd2.h</PathName>
       <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\BitIoLdd1.h</PathName>
       <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\BitIoLdd2.h</PathName>
       <PathName>V:\13_Winter_2015\EGR 436\04_Labs\Workspace\Lab04\Generated_Code\BitIoLdd3.h</PathName>

@@ -5,9 +5,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Generated_Code/AD1.c \
-../Generated_Code/AD2.c \
 ../Generated_Code/AdcLdd1.c \
-../Generated_Code/AdcLdd2.c \
 ../Generated_Code/BitIoLdd1.c \
 ../Generated_Code/BitIoLdd2.c \
 ../Generated_Code/BitIoLdd3.c \
@@ -34,9 +32,7 @@ C_SRCS += \
 
 OBJS += \
 ./Generated_Code/AD1.o \
-./Generated_Code/AD2.o \
 ./Generated_Code/AdcLdd1.o \
-./Generated_Code/AdcLdd2.o \
 ./Generated_Code/BitIoLdd1.o \
 ./Generated_Code/BitIoLdd2.o \
 ./Generated_Code/BitIoLdd3.o \
@@ -63,9 +59,7 @@ OBJS += \
 
 C_DEPS += \
 ./Generated_Code/AD1.d \
-./Generated_Code/AD2.d \
 ./Generated_Code/AdcLdd1.d \
-./Generated_Code/AdcLdd2.d \
 ./Generated_Code/BitIoLdd1.d \
 ./Generated_Code/BitIoLdd2.d \
 ./Generated_Code/BitIoLdd3.d \

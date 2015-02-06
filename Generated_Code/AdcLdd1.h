@@ -6,7 +6,7 @@
 **     Component   : ADC_LDD
 **     Version     : Component 01.183, Driver 01.08, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-02-06, 09:37, # CodeGen: 9
+**     Date/Time   : 2015-02-06, 11:03, # CodeGen: 17
 **     Abstract    :
 **         This device "ADC_LDD" implements an A/D converter,
 **         its control methods and interrupt/event handling procedure.
@@ -18,25 +18,30 @@
 **            A/D interrupt                                : INT_ADC1
 **            A/D interrupt priority                       : medium priority
 **          DMA                                            : Disabled
-**          A/D channel list                               : 1
+**          A/D channel list                               : 2
 **            Channel 0                                    : 
 **              Channel mode                               : Single Ended
 **                Input                                    : 
 **                  A/D channel (pin)                      : ADC1_SE5b/CMP0_IN3/PTC9/FTM3_CH5/I2S0_RX_BCLK/FB_AD6/FTM2_FLT0
+**                  A/D channel (pin) signal               : 
+**            Channel 1                                    : 
+**              Channel mode                               : Single Ended
+**                Input                                    : 
+**                  A/D channel (pin)                      : ADC1_SE4b/CMP0_IN2/PTC8/FTM3_CH4/I2S0_MCLK/FB_AD7
 **                  A/D channel (pin) signal               : 
 **          Static sample groups                           : Disabled
 **          A/D resolution                                 : 16 bits
 **          Low-power mode                                 : Disabled
 **          High-speed conversion mode                     : Disabled
 **          Asynchro clock output                          : Disabled
-**          Sample time                                    : 4 clock periods
+**          Sample time                                    : 24 clock periods
 **          Number of conversions                          : 1
-**          Conversion time                                : 19.230769 µs
+**          Conversion time                                : 34.332275 µs
 **          ADC clock                                      : 1.31 MHz (762.939 ns)
-**          Single conversion time - Single-ended          : 23.126 us
-**          Single conversion time - Differential          : 29.993 us
-**          Additional conversion time - Single-ended      : 19.073 us
-**          Additional conversion time - Differential      : 25.939 us
+**          Single conversion time - Single-ended          : 36.859 us
+**          Single conversion time - Differential          : 43.725 us
+**          Additional conversion time - Single-ended      : 34.332 us
+**          Additional conversion time - Differential      : 41.198 us
 **          Result type                                    : unsigned 16 bits, right justified
 **          Trigger                                        : Disabled
 **          Voltage reference                              : 
@@ -169,7 +174,7 @@ extern "C" {
 
 /* This constant contains the number of channels in the "A/D channel list"
    group */
-#define AdcLdd1_CHANNEL_COUNT           1u
+#define AdcLdd1_CHANNEL_COUNT           2u
 
 /* This constant can be used in the sample array to create a gap in sample group.
    It is intended to disable a measurement of a sample */

@@ -57,9 +57,6 @@ Generated_Code/Cpu.o: ../Generated_Code/Cpu.c ../Generated_Code/Cpu.h \
  V:/13_Winter_2015/EGR\ 436/04_Labs/Workspace/Lab04/Generated_Code/AdcLdd1.h \
  C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/ADC_PDD.h \
  V:/13_Winter_2015/EGR\ 436/04_Labs/Workspace/Lab04/Generated_Code/AdcLdd1.h \
- V:/13_Winter_2015/EGR\ 436/04_Labs/Workspace/Lab04/Generated_Code/AD2.h \
- V:/13_Winter_2015/EGR\ 436/04_Labs/Workspace/Lab04/Generated_Code/AdcLdd2.h \
- V:/13_Winter_2015/EGR\ 436/04_Labs/Workspace/Lab04/Generated_Code/AdcLdd2.h \
  ../Generated_Code/Init_Config.h ../Generated_Code/CPU_Config.h
 
 ../Generated_Code/Cpu.h:
@@ -183,12 +180,6 @@ V:/13_Winter_2015/EGR\ 436/04_Labs/Workspace/Lab04/Generated_Code/AdcLdd1.h:
 C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/ADC_PDD.h:
 
 V:/13_Winter_2015/EGR\ 436/04_Labs/Workspace/Lab04/Generated_Code/AdcLdd1.h:
-
-V:/13_Winter_2015/EGR\ 436/04_Labs/Workspace/Lab04/Generated_Code/AD2.h:
-
-V:/13_Winter_2015/EGR\ 436/04_Labs/Workspace/Lab04/Generated_Code/AdcLdd2.h:
-
-V:/13_Winter_2015/EGR\ 436/04_Labs/Workspace/Lab04/Generated_Code/AdcLdd2.h:
 
 ../Generated_Code/Init_Config.h:
 
