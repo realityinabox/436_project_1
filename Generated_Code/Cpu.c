@@ -7,7 +7,7 @@
 **     Version     : Component 01.045, Driver 01.00, CPU db: 3.00.000
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-02-02, 15:12, # CodeGen: 1
+**     Date/Time   : 2015-02-06, 09:37, # CodeGen: 9
 **     Abstract    :
 **
 **     Settings    :
@@ -126,6 +126,8 @@ void Components_Init(void)
   /* ### TimerInt "TI1_SW" init code ... */
   /* ### ADC "AD1" init code ... */
   AD1_Init();
+  /* ### ADC "AD2" init code ... */
+  AD2_Init();
 }
 #endif /* CPU_COMPONENTS_INIT */
 

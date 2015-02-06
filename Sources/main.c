@@ -55,6 +55,8 @@
 #include "TU1.h"
 #include "AD1.h"
 #include "AdcLdd1.h"
+#include "AD2.h"
+#include "AdcLdd2.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -64,7 +66,7 @@
 #include "Init_Config.h"
 
 // This variable is declared in Events.c and contains the current counter value
-extern volatile int counter, pb, enc_write_flag, adc_flag, timer_1s;
+extern volatile int counter, pb, enc_write_flag, adc1_flag, adc2_flag, timer_1s;
 //extern const unsigned char sunny, cloudy, night;
 
 #define NIGHT 3
@@ -104,26 +106,44 @@ int main(void)
 		if (timer_1s == 1){
 			// start conversion
 			(void)AD1_Measure(FALSE);
+			(void)AD2_Measure(FALSE);
 			// clear flag
 			timer_1s = 0;
-			// toggle LED
+			// toggle LEDAD2
 			//rLED_NegVal();
 		}
-		// if a conversion is completed
-		if(adc_flag == 1){
+		// if LIGHT conversion is completed
+		if(adc1_flag == 1){
 			// reset interrupt flag
-			adc_flag = 0;
+			adc1_flag = 0;
 			// read values
 			(void)AD1_GetValue16(&Val[0]);
 			// assign values to local variables
 			light = Val[0] ;
-			temp_adc = Val[1] ;
 
 			// convert light reading from adc to mV
 			light_mV = light / 19.8591;
 			light_ratio = light_mV / 3300;
 
+			// calculate the resistance value
 			resistance = (RES * light_ratio) / ( 1 - light_ratio);
+
+			// convert light reading from adc to mV
+			light_mV = light / 19.8591;
+			light_ratio = light_mV / 3300;
+
+			// set lux_flag
+			lux_flag = 1;
+
+		}
+		// if TEMPERATURE conversion is done
+		if (adc2_flag == 1){
+			// reset interrupt flag
+			adc2_flag = 0;
+			// read values
+			(void)AD2_GetValue16(&Val[1]);
+			// assign values to local variables
+			temp_adc = Val[1] ;
 
 			// convert temp_adc to mV by scaling 2^16 over 3.3 volts
 			temp_mV = temp_adc / 19.8591;
@@ -132,8 +152,6 @@ int main(void)
 
 			// set the temp_flag to signal display to update
 			temp_flag = 1;
-			// set lux_flag
-			lux_flag = 1;
 
 		}
 		// END ADC READS
@@ -148,7 +166,7 @@ int main(void)
 			// might need to guard against over-flow here, incase the button is held down and we keep incrementing
 		}
 		// wait for counter to count up to 30,000 (ie, debounced)
-		if (count >= 30000){
+		if (count >= 15000){
 			// update button status
 			button_pressed = ENC_PB_GetVal();
 			// if button is pressed, set the flag
@@ -267,14 +285,14 @@ int main(void)
 	}
 
 	/*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
-  /*** End of RTOS startup code.  ***/
-  /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;){}
-  /*** Processor Expert end of main routine. DON'T WRITE CODE BELOW!!! ***/
+	/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+	PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
+#endif
+	/*** End of RTOS startup code.  ***/
+	/*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
+	for(;;){}
+	/*** Processor Expert end of main routine. DON'T WRITE CODE BELOW!!! ***/
 } /*** End of main routine. DO NOT MODIFY THIS TEXT!!! ***/
 
 /* END main */

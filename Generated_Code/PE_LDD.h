@@ -5,7 +5,7 @@
 **     Processor   : MK64FN1M0VLQ12
 **     Version     : Component 01.045, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-02-02, 15:12, # CodeGen: 1
+**     Date/Time   : 2015-02-06, 09:37, # CodeGen: 9
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -77,6 +77,8 @@
 #include "TU1.h"
 #include "AD1.h"
 #include "AdcLdd1.h"
+#include "AD2.h"
+#include "AdcLdd2.h"
 
 
 /*

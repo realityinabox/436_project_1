@@ -6,7 +6,7 @@
 **     Component   : ADC
 **     Version     : Component 01.697, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-02-02, 15:12, # CodeGen: 1
+**     Date/Time   : 2015-02-06, 09:37, # CodeGen: 9
 **     Abstract    :
 **         This device "ADC" implements an A/D converter,
 **         its control methods and interrupt/event handling procedure.
@@ -18,13 +18,9 @@
 **          Interrupt service/event                        : Enabled
 **            A/D interrupt                                : INT_ADC1
 **            A/D interrupt priority                       : medium priority
-**          A/D channels                                   : 2
+**          A/D channels                                   : 1
 **            Channel0                                     : 
 **              A/D channel (pin)                          : ADC1_SE5b/CMP0_IN3/PTC9/FTM3_CH5/I2S0_RX_BCLK/FB_AD6/FTM2_FLT0
-**              A/D channel (pin) signal                   : 
-**              Mode select                                : Single Ended
-**            Channel1                                     : 
-**              A/D channel (pin)                          : ADC1_SE4b/CMP0_IN2/PTC8/FTM3_CH4/I2S0_MCLK/FB_AD7
 **              A/D channel (pin) signal                   : 
 **              Mode select                                : Single Ended
 **          A/D resolution                                 : 16 bits
@@ -119,7 +115,7 @@ extern "C" {
 
 
 
-#define AD1_SAMPLE_GROUP_SIZE 2U
+#define AD1_SAMPLE_GROUP_SIZE 1U
 void AD1_HWEnDi(void);
 /*
 ** ===================================================================

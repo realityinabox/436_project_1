@@ -1,57 +1,57 @@
 /*!
-  \page AdcLdd1 AdcLdd1 (ADC_LDD)
+  \page AdcLdd2 AdcLdd2 (ADC_LDD)
 **         This device "ADC_LDD" implements an A/D converter,
 **         its control methods and interrupt/event handling procedure.
 **
 
-- \subpage AdcLdd1_settings
-- \subpage AdcLdd1_regs_overview  
-- \subpage AdcLdd1_regs_details
-- \ref AdcLdd1_module "Component documentation" 
-\page AdcLdd1_regs_overview Registers Initialization Overview
+- \subpage AdcLdd2_settings
+- \subpage AdcLdd2_regs_overview  
+- \subpage AdcLdd2_regs_details
+- \ref AdcLdd2_module "Component documentation" 
+\page AdcLdd2_regs_overview Registers Initialization Overview
 This page contains the initialization values for the registers of the peripheral(s) configured
 by the component. 
 <table>
-<tr><td colspan="4" class="ttitle1">AdcLdd1 Initialization</td></tr>
+<tr><td colspan="4" class="ttitle1">AdcLdd2 Initialization</td></tr>
 <tr><td class="ttitle2">Address</td><td class="ttitle2">Register</td><td class="ttitle2">Register Value</td><td class="ttitle2">Register Description</td></tr>
-<tr><td>0x400BB000</td><td>ADC1_SC1A</td>
-<td class="regNotResetVal">0x00000045</td>
- <td>ADC1_SC1A register, peripheral AdcLdd1.</td></tr>
-<tr><td>0x40048030</td><td>SIM_SCGC3</td>
-<td class="regNotResetVal">0x08000000</td>
- <td>SIM_SCGC3 register, peripheral AdcLdd1.</td></tr>
-<tr><td>0xE000E449</td><td>NVICIP73</td>
+<tr><td>0x4003B000</td><td>ADC0_SC1A</td>
+<td class="regNotResetVal">0x0000004C</td>
+ <td>ADC0_SC1A register, peripheral AdcLdd2.</td></tr>
+<tr><td>0x4004803C</td><td>SIM_SCGC6</td>
+<td class="regNotResetVal">0x49001001</td>
+ <td>SIM_SCGC6 register, peripheral AdcLdd2.</td></tr>
+<tr><td>0xE000E427</td><td>NVICIP39</td>
 <td class="regNotResetVal">0x00000070</td>
- <td>NVICIP73 register, peripheral AdcLdd1.</td></tr>
-<tr><td>0xE000E108</td><td>NVICISER2</td>
-<td class="regNotResetVal">0x00000200</td>
- <td>NVICISER2 register, peripheral AdcLdd1.</td></tr>
+ <td>NVICIP39 register, peripheral AdcLdd2.</td></tr>
+<tr><td>0xE000E104</td><td>NVICISER1</td>
+<td class="regNotResetVal">0x30000480</td>
+ <td>NVICISER1 register, peripheral AdcLdd2.</td></tr>
 <tr><td>0x40048038</td><td>SIM_SCGC5</td>
 <td class="regNotResetVal">0x00043D82</td>
- <td>SIM_SCGC5 register, peripheral AdcLdd1.</td></tr>
-<tr><td>0x4004B024</td><td>PORTC_PCR9</td>
+ <td>SIM_SCGC5 register, peripheral AdcLdd2.</td></tr>
+<tr><td>0x4004A008</td><td>PORTB_PCR2</td>
 <td class="regResetVal">0x00000000</td>
- <td>PORTC_PCR9 register, peripheral AdcLdd1.</td></tr>
-<tr><td>0x400BB020</td><td>ADC1_SC2</td>
+ <td>PORTB_PCR2 register, peripheral AdcLdd2.</td></tr>
+<tr><td>0x4003B020</td><td>ADC0_SC2</td>
 <td class="regResetVal">0x00000000</td>
- <td>ADC1_SC2 register, peripheral AdcLdd1.</td></tr>
-<tr><td>0x400BB008</td><td>ADC1_CFG1</td>
+ <td>ADC0_SC2 register, peripheral AdcLdd2.</td></tr>
+<tr><td>0x4003B008</td><td>ADC0_CFG1</td>
 <td class="regNotResetVal">0x0000006D</td>
- <td>ADC1_CFG1 register, peripheral AdcLdd1.</td></tr>
-<tr><td>0x400BB00C</td><td>ADC1_CFG2</td>
-<td class="regNotResetVal">0x00000010</td>
- <td>ADC1_CFG2 register, peripheral AdcLdd1.</td></tr>
-<tr><td>0x400BB024</td><td>ADC1_SC3</td>
+ <td>ADC0_CFG1 register, peripheral AdcLdd2.</td></tr>
+<tr><td>0x4003B00C</td><td>ADC0_CFG2</td>
+<td class="regResetVal">0x00000000</td>
+ <td>ADC0_CFG2 register, peripheral AdcLdd2.</td></tr>
+<tr><td>0x4003B024</td><td>ADC0_SC3</td>
 <td class="regNotResetVal">0x00000040</td>
- <td>ADC1_SC3 register, peripheral AdcLdd1.</td></tr>
+ <td>ADC0_SC3 register, peripheral AdcLdd2.</td></tr>
 </table>
 Color Denotes Reset Value
 <br/>
-\page AdcLdd1_regs_details Register Initialization Details
+\page AdcLdd2_regs_details Register Initialization Details
 This page contains detailed description of initialization values for the 
 registers of the peripheral(s) configured by the component. 
 
-<div class="reghdr1">ADC1_SC1A</div>
+<div class="reghdr1">ADC0_SC1A</div>
 <div class="regdiag">
 <table class="regtbl">
 <tr class="trd1r">
@@ -96,8 +96,8 @@ registers of the peripheral(s) configured by the component.
 </table>
         
 </div>
-<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x400BB000</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000045</td></tr>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4003B000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x0000004C</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x0000001F</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>7</td><td>COCO</td><td>0x00</td><td>Conversion Complete Flag</td>
@@ -105,7 +105,7 @@ registers of the peripheral(s) configured by the component.
 <tr><td>5</td><td>DIFF</td><td>0x00</td><td>Differential Mode Enable</td>
 <tr><td>0 - 4</td><td>ADCH</td><td>0x00</td><td>Input channel select</td>
 </tr></table>
-<div class="reghdr1">SIM_SCGC3</div>
+<div class="reghdr1">SIM_SCGC6</div>
 <div class="regdiag">
 <table class="regtbl">
 <tr class="trd1r">
@@ -113,18 +113,18 @@ registers of the peripheral(s) configured by the component.
 <td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
 </tr>
 <tr>
-<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
-<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">ADC1</td><td colspan="1" rowspan="2">-</td>
-<td colspan="1" rowspan="2">FTM3</td><td colspan="1" rowspan="2">FTM2</td><td colspan="1" rowspan="2">-</td>
-<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
-<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">SDHC</td>
-<td colspan="1" rowspan="2">-</td>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">DAC0</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">RTC</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">ADC0</td>
+<td colspan="1" rowspan="2">FTM2</td><td colspan="1" rowspan="2">FTM1</td><td colspan="1" rowspan="2">FTM0</td>
+<td colspan="1" rowspan="2">PIT</td><td colspan="1" rowspan="2">PDB</td><td colspan="1" rowspan="2">USBDCD</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">CRC</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
 </tr>
 <tr>
 <td class="trd1c">W</td>
 </tr>
 <tr class="trd1r">
-<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td class="trd1c">Reset</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
 <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
 </tr>
 </table>
@@ -134,42 +134,53 @@ registers of the peripheral(s) configured by the component.
 <td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
 </tr>
 <tr>
-<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
-<td colspan="1" rowspan="2">SPI2</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">I2S</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">SPI1</td><td colspan="1" rowspan="2">SPI0</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">RNGA</td><td colspan="1" rowspan="2">-</td>
 <td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
-<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
-<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
-<td colspan="1" rowspan="2">RNGA</td>
+<td colspan="1" rowspan="2">FLEXCAN0</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">DMAMUX</td><td colspan="1" rowspan="2">FTF</td>
 </tr>
 <tr>
 <td class="trd1c">W</td>
 </tr>
 <tr class="trd1r">
 <td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td>
 </tr>
 </table>
         
 </div>
-<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40048030</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x08000000</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4004803C</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x49001001</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x40000001</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
-<tr><td>27</td><td>ADC1</td><td>0x01</td><td>ADC1 Clock Gate Control</td>
-<tr><td>25</td><td>FTM3</td><td>0x00</td><td>FTM3 Clock Gate Control</td>
-<tr><td>24</td><td>FTM2</td><td>0x00</td><td>FTM2 Clock Gate Control</td>
-<tr><td>17</td><td>SDHC</td><td>0x00</td><td>SDHC Clock Gate Control</td>
-<tr><td>12</td><td>SPI2</td><td>0x00</td><td>SPI2 Clock Gate Control</td>
-<tr><td>0</td><td>RNGA</td><td>0x00</td><td>RNGA Clock Gate Control</td>
+<tr><td>31</td><td>DAC0</td><td>0x00</td><td>DAC0 Clock Gate Control</td>
+<tr><td>29</td><td>RTC</td><td>0x00</td><td>RTC Access Control</td>
+<tr><td>27</td><td>ADC0</td><td>0x01</td><td>ADC0 Clock Gate Control</td>
+<tr><td>26</td><td>FTM2</td><td>0x00</td><td>FTM2 Clock Gate Control</td>
+<tr><td>25</td><td>FTM1</td><td>0x00</td><td>FTM1 Clock Gate Control</td>
+<tr><td>24</td><td>FTM0</td><td>0x01</td><td>FTM0 Clock Gate Control</td>
+<tr><td>23</td><td>PIT</td><td>0x00</td><td>PIT Clock Gate Control</td>
+<tr><td>22</td><td>PDB</td><td>0x00</td><td>PDB Clock Gate Control</td>
+<tr><td>21</td><td>USBDCD</td><td>0x00</td><td>USB DCD Clock Gate Control</td>
+<tr><td>18</td><td>CRC</td><td>0x00</td><td>CRC Clock Gate Control</td>
+<tr><td>15</td><td>I2S</td><td>0x00</td><td>I2S Clock Gate Control</td>
+<tr><td>13</td><td>SPI1</td><td>0x00</td><td>SPI1 Clock Gate Control</td>
+<tr><td>12</td><td>SPI0</td><td>0x01</td><td>SPI0 Clock Gate Control</td>
+<tr><td>9</td><td>RNGA</td><td>0x00</td><td>RNGA Clock Gate Control</td>
+<tr><td>4</td><td>FLEXCAN0</td><td>0x00</td><td>FlexCAN0 Clock Gate Control</td>
+<tr><td>1</td><td>DMAMUX</td><td>0x00</td><td>DMA Mux Clock Gate Control</td>
+<tr><td>0</td><td>FTF</td><td>0x01</td><td>Flash Memory Clock Gate Control</td>
 </tr></table>
-<div class="reghdr1">NVICIP73</div>
+<div class="reghdr1">NVICIP39</div>
 <div class="regdiag">
 <table class="regtbl">
 <tr class="trd1r">
 <td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
 </tr>
 <tr>
-<td class="trd1c">R</td><td colspan="8" rowspan="2">PRI73</td>
+<td class="trd1c">R</td><td colspan="8" rowspan="2">PRI39</td>
 </tr>
 <tr>
 <td class="trd1c">W</td>
@@ -180,13 +191,13 @@ registers of the peripheral(s) configured by the component.
 </table>
         
 </div>
-<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0xE000E449</td></tr>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0xE000E427</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000070</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
-<tr><td>0 - 7</td><td>PRI73</td><td>0x00</td><td>Priority of interrupt 73</td>
+<tr><td>0 - 7</td><td>PRI39</td><td>0x00</td><td>Priority of interrupt 39</td>
 </tr></table>
-<div class="reghdr1">NVICISER2</div>
+<div class="reghdr1">NVICISER1</div>
 <div class="regdiag">
 <table class="regtbl">
 <tr class="trd1r">
@@ -222,8 +233,8 @@ registers of the peripheral(s) configured by the component.
 </table>
         
 </div>
-<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0xE000E108</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000200</td></tr>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0xE000E104</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x30000480</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>0 - 31</td><td>SETENA</td><td>0x00</td><td>Interrupt set enable bits</td>
@@ -285,7 +296,7 @@ registers of the peripheral(s) configured by the component.
 <tr><td>9</td><td>PORTA</td><td>0x00</td><td>Port A Clock Gate Control</td>
 <tr><td>0</td><td>LPTMR</td><td>0x00</td><td>Low Power Timer Access Control</td>
 </tr></table>
-<div class="reghdr1">PORTC_PCR9</div>
+<div class="reghdr1">PORTB_PCR2</div>
 <div class="regdiag">
 <table class="regtbl">
 <tr class="trd1r">
@@ -329,7 +340,7 @@ registers of the peripheral(s) configured by the component.
 </table>
         
 </div>
-<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4004B024</td></tr>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4004A008</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
@@ -344,7 +355,7 @@ registers of the peripheral(s) configured by the component.
 <tr><td>1</td><td>PE</td><td>0x00</td><td>Pull Enable</td>
 <tr><td>0</td><td>PS</td><td>0x00</td><td>Pull Select</td>
 </tr></table>
-<div class="reghdr1">ADC1_SC2</div>
+<div class="reghdr1">ADC0_SC2</div>
 <div class="regdiag">
 <table class="regtbl">
 <tr class="trd1r">
@@ -390,7 +401,7 @@ registers of the peripheral(s) configured by the component.
 </table>
         
 </div>
-<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x400BB020</td></tr>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4003B020</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
@@ -402,7 +413,7 @@ registers of the peripheral(s) configured by the component.
 <tr><td>2</td><td>DMAEN</td><td>0x00</td><td>DMA Enable</td>
 <tr><td>0 - 1</td><td>REFSEL</td><td>0x00</td><td>Voltage Reference Selection</td>
 </tr></table>
-<div class="reghdr1">ADC1_CFG1</div>
+<div class="reghdr1">ADC0_CFG1</div>
 <div class="regdiag">
 <table class="regtbl">
 <tr class="trd1r">
@@ -447,7 +458,7 @@ registers of the peripheral(s) configured by the component.
 </table>
         
 </div>
-<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x400BB008</td></tr>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4003B008</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x0000006D</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
@@ -457,7 +468,7 @@ registers of the peripheral(s) configured by the component.
 <tr><td>2 - 3</td><td>MODE</td><td>0x02</td><td>Conversion mode selection</td>
 <tr><td>0 - 1</td><td>ADICLK</td><td>0x00</td><td>Input Clock Select</td>
 </tr></table>
-<div class="reghdr1">ADC1_CFG2</div>
+<div class="reghdr1">ADC0_CFG2</div>
 <div class="regdiag">
 <table class="regtbl">
 <tr class="trd1r">
@@ -502,16 +513,16 @@ registers of the peripheral(s) configured by the component.
 </table>
         
 </div>
-<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x400BB00C</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000010</td></tr>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4003B00C</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
-<tr><td>4</td><td>MUXSEL</td><td>0x01</td><td>ADC Mux Select</td>
+<tr><td>4</td><td>MUXSEL</td><td>0x00</td><td>ADC Mux Select</td>
 <tr><td>3</td><td>ADACKEN</td><td>0x00</td><td>Asynchronous Clock Output Enable</td>
 <tr><td>2</td><td>ADHSC</td><td>0x00</td><td>High-Speed Configuration</td>
 <tr><td>0 - 1</td><td>ADLSTS</td><td>0x00</td><td>Long Sample Time Select</td>
 </tr></table>
-<div class="reghdr1">ADC1_SC3</div>
+<div class="reghdr1">ADC0_SC3</div>
 <div class="regdiag">
 <table class="regtbl">
 <tr class="trd1r">
@@ -557,7 +568,7 @@ registers of the peripheral(s) configured by the component.
 </table>
         
 </div>
-<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x400BB024</td></tr>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4003B024</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000040</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
@@ -569,23 +580,23 @@ registers of the peripheral(s) configured by the component.
 </tr></table>
 */
 /*!
-\page AdcLdd1_settings Component Settings
+\page AdcLdd2_settings Component Settings
 \code
-**          Component name                                 : AdcLdd1
-**          A/D converter                                  : ADC1
+**          Component name                                 : AdcLdd2
+**          A/D converter                                  : ADC0
 **          Discontinuous mode                             : no
 **          Interrupt service/event                        : Enabled
-**            A/D interrupt                                : INT_ADC1
+**            A/D interrupt                                : INT_ADC0
 **            A/D interrupt priority                       : medium priority
 **          DMA                                            : Disabled
 **          A/D channel list                               : 1
 **            Channel 0                                    : 
 **              Channel mode                               : Single Ended
 **                Input                                    : 
-**                  A/D channel (pin)                      : ADC1_SE5b/CMP0_IN3/PTC9/FTM3_CH5/I2S0_RX_BCLK/FB_AD6/FTM2_FLT0
+**                  A/D channel (pin)                      : ADC0_SE12/PTB2/I2C0_SCL/UART0_RTS_b/ENET0_1588_TMR0/FTM0_FLT3
 **                  A/D channel (pin) signal               : 
 **          Static sample groups                           : Disabled
-**          A/D resolution                                 : 16 bits
+**          A/D resolution                                 : Autoselect
 **          Low-power mode                                 : Disabled
 **          High-speed conversion mode                     : Disabled
 **          Asynchro clock output                          : Disabled

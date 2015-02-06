@@ -5,7 +5,7 @@
 **     Processor   : MK64FN1M0VLQ12
 **     Version     : Component 01.045, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-02-02, 13:47, # CodeGen: 0
+**     Date/Time   : 2015-02-06, 09:37, # CodeGen: 9
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -62,7 +62,8 @@
 ** Array of initialized device structures of LDD components.
 ** ===========================================================================
 */
-LDD_TDeviceData *PE_LDD_DeviceDataList[13] = {
+LDD_TDeviceData *PE_LDD_DeviceDataList[14] = {
+    NULL,
     NULL,
     NULL,
     NULL,
@@ -159,6 +160,8 @@ bool PE_PeripheralUsed(uint32_t PrphBaseAddress)
     case 0x40038000UL:
     /* Base address allocated by peripheral(s) ADC1 */
     case 0x400BB000UL:
+    /* Base address allocated by peripheral(s) ADC0 */
+    case 0x4003B000UL:
       result = TRUE;
       break;
     default:

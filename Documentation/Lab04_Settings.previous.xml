@@ -1303,7 +1303,7 @@ PE_DEBUGHALT();
         <Interrupt v="INT_FTM0" />
         <Interrupt_priority v="medium priority" />
       </boolgroup>
-      <Interrupt_period v="500 ms" />
+      <Interrupt_period v="1000 ms" />
       <Same_period_in_modes v="yes" />
       <Component_uses_entire_timer v="no" />
       <group name="Initialization">
@@ -1326,7 +1326,7 @@ PE_DEBUGHALT();
               <Interrupt v="INT_FTM0" />
               <Interrupt_priority v="medium priority" />
             </boolgroup>
-            <Interrupt_period v="500 ms" />
+            <Interrupt_period v="1000 ms" />
             <group name="Initialization">
               <Enabled_in_init__code v="yes" />
               <list name="Auto Initialization" v="1">
@@ -1420,7 +1420,7 @@ PE_DEBUGHALT();
       </enumgroup>
       <enumgroup name="Counter restart" v="On-match">
         <Period_device v="FTM0_MOD" />
-        <Period v="500 ms" />
+        <Period v="1000 ms" />
         <boolgroup name="Interrupt" v="Enabled">
           <Interrupt v="INT_FTM0" />
           <Interrupt_priority v="medium priority" />
@@ -1537,14 +1537,14 @@ PE_DEBUGHALT();
           <Low_power_mode v="Disabled" />
           <High_speed_conversion_mode v="Disabled" />
           <Asynchro_clock_output v="Disabled" />
-          <Sample_time v="4 clock periods" />
+          <Sample_time v="24 clock periods" />
           <Number_of_conversions v="1" />
-          <Conversion_time v="19.230769 &amp;#181;s" />
+          <Conversion_time v="34.332275 &amp;#181;s" />
           <ADC_clock v="1.31 MHz (762.939 ns)" />
-          <Single_conversion_time___Single_ended v="23.126 us" />
-          <Single_conversion_time___Differential v="29.993 us" />
-          <Additional_conversion_time___Single_ended v="19.073 us" />
-          <Additional_conversion_time___Differential v="25.939 us" />
+          <Single_conversion_time___Single_ended v="36.859 us" />
+          <Single_conversion_time___Differential v="43.725 us" />
+          <Additional_conversion_time___Single_ended v="34.332 us" />
+          <Additional_conversion_time___Differential v="41.198 us" />
           <Result_type v="unsigned 16 bits, right justified" />
           <boolgroup name="Trigger" v="Disabled" />
           <group name="Voltage reference">
@@ -1628,11 +1628,11 @@ PE_DEBUGHALT();
         </group>
       </list>
       <A_D_resolution v="16 bits" />
-      <Conversion_time v="19.230769 &amp;#181;s" />
+      <Conversion_time v="34.332275 &amp;#181;s" />
       <Low_power_mode v="Disabled" />
       <High_speed_conversion_mode v="Disabled" />
       <Asynchro_clock_output v="Disabled" />
-      <Sample_time v="0 = short" />
+      <Sample_time v="20 = long" />
       <boolgroup name="Internal trigger" v="Disabled" />
       <Number_of_conversions v="1" />
       <group name="Initialization">
