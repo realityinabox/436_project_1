@@ -6,7 +6,7 @@
 **     Component   : ADC
 **     Version     : Component 01.697, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-02-06, 11:03, # CodeGen: 17
+**     Date/Time   : 2015-02-06, 11:22, # CodeGen: 20
 **     Abstract    :
 **         This device "ADC" implements an A/D converter,
 **         its control methods and interrupt/event handling procedure.
@@ -47,10 +47,11 @@
 **          Get value directly                             : yes
 **          Wait for result                                : yes
 **     Contents    :
-**         Measure     - byte AD1_Measure(bool WaitForResult);
-**         MeasureChan - byte AD1_MeasureChan(bool WaitForResult, byte Channel);
-**         GetValue16  - byte AD1_GetValue16(word *Values);
-**         Calibrate   - byte AD1_Calibrate(bool WaitForResult);
+**         Measure        - byte AD1_Measure(bool WaitForResult);
+**         MeasureChan    - byte AD1_MeasureChan(bool WaitForResult, byte Channel);
+**         GetValue16     - byte AD1_GetValue16(word *Values);
+**         GetChanValue16 - byte AD1_GetChanValue16(byte Channel, word *Value);
+**         Calibrate      - byte AD1_Calibrate(bool WaitForResult);
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -224,6 +225,42 @@ byte AD1_GetValue16(word *Values);
 **                           the active speed mode
 **                           ERR_NOTAVAIL - Requested value not
 **                           available
+**                           ERR_OVERRUN - External trigger overrun flag
+**                           was detected after the last value(s) was
+**                           obtained (for example by GetValue). This
+**                           error may not be supported on some CPUs
+**                           (see generated code).
+*/
+/* ===================================================================*/
+
+byte AD1_GetChanValue16(byte Channel, word *Value);
+/*
+** ===================================================================
+**     Method      :  AD1_GetChanValue16 (component ADC)
+*/
+/*!
+**     @brief
+**         This method returns the last measured value of the required
+**         channel. Compared with [GetChanValue] method this method
+**         returns more accurate result if the [number of conversions]
+**         is greater than 1 and [AD resolution] is less than 16 bits.
+**         In addition, the user code dependency on [AD resolution] is
+**         eliminated.
+**     @param
+**         Channel         - Channel number. If only one
+**                           channel in the component is set then this
+**                           parameter is ignored.
+**     @param
+**         Value           - Pointer to the measured value.
+**     @return
+**                         - Error code, possible codes:
+**                           ERR_OK - OK
+**                           ERR_SPEED - This device does not work in
+**                           the active speed mode
+**                           ERR_NOTAVAIL - Requested value not
+**                           available
+**                           ERR_RANGE - Parameter "Channel" out of
+**                           range
 **                           ERR_OVERRUN - External trigger overrun flag
 **                           was detected after the last value(s) was
 **                           obtained (for example by GetValue). This

@@ -1537,14 +1537,14 @@ PE_DEBUGHALT();
           <Low_power_mode v="Disabled" />
           <High_speed_conversion_mode v="Disabled" />
           <Asynchro_clock_output v="Disabled" />
-          <Sample_time v="10 clock periods" />
+          <Sample_time v="24 clock periods" />
           <Number_of_conversions v="1" />
-          <Conversion_time v="23.651123 &amp;#181;s" />
+          <Conversion_time v="34.332275 &amp;#181;s" />
           <ADC_clock v="1.31 MHz (762.939 ns)" />
-          <Single_conversion_time___Single_ended v="26.178 us" />
-          <Single_conversion_time___Differential v="33.044 us" />
-          <Additional_conversion_time___Single_ended v="23.651 us" />
-          <Additional_conversion_time___Differential v="30.517 us" />
+          <Single_conversion_time___Single_ended v="36.859 us" />
+          <Single_conversion_time___Differential v="43.725 us" />
+          <Additional_conversion_time___Single_ended v="34.332 us" />
+          <Additional_conversion_time___Differential v="41.198 us" />
           <Result_type v="unsigned 16 bits, right justified" />
           <boolgroup name="Trigger" v="Disabled" />
           <group name="Voltage reference">
@@ -1628,13 +1628,13 @@ PE_DEBUGHALT();
         </group>
       </list>
       <A_D_resolution v="16 bits" />
-      <Conversion_time v="23.651123 &amp;#181;s" />
+      <Conversion_time v="34.332275 &amp;#181;s" />
       <Low_power_mode v="Disabled" />
       <High_speed_conversion_mode v="Disabled" />
       <Asynchro_clock_output v="Disabled" />
-      <Sample_time v="6" />
+      <Sample_time v="20 = long" />
       <boolgroup name="Internal trigger" v="Disabled" />
-      <Number_of_conversions v="255" />
+      <Number_of_conversions v="4" />
       <group name="Initialization">
         <Enabled_in_init__code v="yes" />
         <Events_enabled_in_init_ v="yes" />
@@ -1661,7 +1661,7 @@ PE_DEBUGHALT();
       <GetValue8 v="don&amp;apos;t generate code" />
       <GetChanValue8 v="don&amp;apos;t generate code" />
       <GetValue16 v="generate code" />
-      <GetChanValue16 v="don&amp;apos;t generate code" />
+      <GetChanValue16 v="generate code" />
       <Calibrate v="generate code" />
       <GetCalibrationStatus v="don&amp;apos;t generate code" />
       <EnableAsynchroClock v="don&amp;apos;t generate code" />

@@ -71,8 +71,8 @@ extern volatile int counter, pb, enc_write_flag, adc1_flag, timer_1s;
 #define CLOUDY 2
 #define SUNNY  1
 #define RES 9890 // ohms
-#define LIGHT 1
-#define TEMP 0
+#define LIGHT 0
+#define TEMP 1
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
@@ -124,9 +124,9 @@ int main(void)
 			// reset conversion done flag
 			adc1_flag = 0;
 			// read values
-			(void)AD1_GetValue16(&Val[0]);
+			(void)AD1_GetChanValue16(LIGHT, &Val[LIGHT]);
 			// assign values to local variables
-			light = Val[0] ;
+			light = Val[LIGHT] ;
 
 			// convert light reading from adc to mV
 			light_mV = light / 19.8591;
@@ -150,10 +150,10 @@ int main(void)
 			// reset conversion done flag
 			adc1_flag = 0;
 			// read values
-			(void)AD1_GetValue16(&Val[0]);
+			(void)AD1_GetChanValue16(TEMP, &Val[TEMP]);
 			// assign values to local variables
 
-			temp_adc = Val[1] ;
+			temp_adc = Val[TEMP] ;
 
 			// convert temp_adc to mV by scaling 2^16 over 3.3 volts
 			temp_mV = temp_adc / 19.8591;
@@ -200,6 +200,7 @@ int main(void)
 			hold = 1;
 			// flag the display to update temperature
 			temp_flag = 1;
+			lux_flag = 1;
 			// invert the display
 			//PDC1_SetMode(mode);
 		}
@@ -282,7 +283,7 @@ int main(void)
 			sprintf(lux_str, "%d", (int)light);
 			sprintf(res_str, "%d", (int)resistance);
 			PDC1_SetPos(0,3);
-			PDC1_WriteString("Lux:");
+			PDC1_WriteString("ADC:");
 			PDC1_WriteString(lux_str);
 			PDC1_SetPos(0,4);
 			PDC1_WriteString("Res:");
