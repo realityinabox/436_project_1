@@ -86,12 +86,12 @@ void check_enc_pb(void);
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
 char *str[10], *int_str[4], *dec_str[4], *lux_str[10], *res_str[10];
-	int count = 0, conv_type = 1;
-	int char_col;
-	int button_pressed, enc_pb_flag = 0, temp_flag = 0, lux_flag = 1, mode = 1, hold = 0;
-	unsigned short Val[2], full = 0xFFFF, temp_adc, light;
-	float temp_C, temp_F, temp_mV, light_mV, resistance, light_ratio;
-	int temp_int, temp_dec, x_pos;
+int count = 0, conv_type = 1;
+int char_col;
+int button_pressed, enc_pb_flag = 0, temp_flag = 0, lux_flag = 1, mode = 1, hold = 0;
+unsigned short Val[2], full = 0xFFFF, temp_adc, light;
+float temp_C, temp_F, temp_mV, light_mV, resistance, light_ratio;
+int temp_int, temp_dec, x_pos;
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 int main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
@@ -120,15 +120,14 @@ int main(void)
 			}
 			// reset timer flag
 			timer_1s = 0;
-
 		}
+
 		// if LIGHT conversion is completed
 		if(adc1_flag == 1 && conv_type == LIGHT){
 			read_light();
 			// reset conversion flags
 			adc1_flag = 0;
 			conv_type = TEMP;
-
 		}
 		// if TEMPERATURE conversion is done
 		if (adc1_flag == 1 && conv_type == TEMP){
@@ -156,14 +155,14 @@ int main(void)
 	}
 
 	/*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
-  #ifdef PEX_RTOS_START
-    PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
-  #endif
-  /*** End of RTOS startup code.  ***/
-  /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  for(;;){}
-  /*** Processor Expert end of main routine. DON'T WRITE CODE BELOW!!! ***/
+	/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
+#ifdef PEX_RTOS_START
+	PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTOS component. */
+#endif
+	/*** End of RTOS startup code.  ***/
+	/*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
+	for(;;){}
+	/*** Processor Expert end of main routine. DON'T WRITE CODE BELOW!!! ***/
 } /*** End of main routine. DO NOT MODIFY THIS TEXT!!! ***/
 /*
  *  void read_light(void)

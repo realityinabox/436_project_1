@@ -845,8 +845,6 @@ void PDC1_weather_image(int type, int x, int y){
 			}
 		}
 	}
-
-
 }
 
 /*
